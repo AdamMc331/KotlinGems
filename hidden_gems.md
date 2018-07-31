@@ -395,6 +395,8 @@ val (result, status) = function(...)
 
 # Destructuring Declarations
 
+In order to destructure a class, you need the relevant `componentN()` functions.
+
 ```kotlin
 class Person(val name: String, val age: Int) {
 	operator fun component1(): String {
