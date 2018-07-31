@@ -153,45 +153,25 @@ myList.swap(1, 2)
 
 # Iterating Collections
 
+In Java, we're used to iterating a collection to find one that meets our condition.
+
 ```java
 public String getAdam(List<Person> people) {
-    Person result = null;
-
     for (Person person : people) {
     	if (person.getName().equals("Adam")) {
-    		result = person;
-    		break;
+    		return person;
     	}
     }
 
-    return result;
-}
-```
-
-^ Java way of searching for the first item in a list.
-
----
-
-# Iterating Collections
-
-```java
-public boolean hasAdam(List<Person> people) {
-	boolean result = false;
-
-	for (Person person : people) {
-		if (person.getName().equals("Adam")) {
-			result = true;
-			break;
-		}
-	}
-
-	return result;
+    return null;
 }
 ```
 
 ---
 
 # Iterating Collections
+
+Kotlin provides methods for this that just accept a condition.
 
 ```kotlin
 fun getAdam(people: List<Person>): Person? {
